@@ -13,6 +13,7 @@
 html {
     color: #222;
     font-size: 1em;
+    height: 100%;
     line-height: 1.4;
 }
 
@@ -96,31 +97,63 @@ textarea {
    ========================================================================== */
 
 body {
-  background: #000 url("../img/ice-hd.jpg") repeat 0 0;
+  background-image: url("../img/ice-hd.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: top;
+  background-color: #000;
   color: white;
-  font-family: 'Oswald', sans-serif;
+  height: 100%;
   position: relative;
+}
+
+#gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0.80) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0.80) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,0.80) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  height: 100%;
+  width: 100%;
 }
 
 #content {
   position: absolute;
-  right: 10%;
-  text-align: right;
-  width: 320px;
+  height: 92%;
+  left: 2%;
+  top: 10%;
+  text-align: left;
+  width: 100%;
 }
 #content h1 {
-  font-size: 42px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 12vw;
   font-weight: 400;
+  margin: 0;
 }
 #content ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 #content li {
-  font-size: 38px;
+  display: block;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.5em;
   font-weight: 300;
+  margin: 1em 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
 }
+@media only screen and (min-width: 480px) {
+  #content li {
+    display: inline-block;
+    margin: 0;
+    width: 18%;
+  }
+}
+
 #content a {
   text-decoration: none;
 }
@@ -131,6 +164,15 @@ body {
 #content a:hover,
 #content a:active {
   color: #777;
+}
+
+#small-print {
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  height: 8%;
+  left: 0;
+  width: 100%;
 }
 
 
